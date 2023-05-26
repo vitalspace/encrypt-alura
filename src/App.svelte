@@ -53,7 +53,7 @@
     }
 
     if (validateCapitalLetters(textValue)) {
-      alert("Captital latters are not allowed");
+      alert("Capitital letters are not allowed");
       textValue = "";
       return;
     }
