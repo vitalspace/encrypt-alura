@@ -36,7 +36,7 @@
     e.preventDefault();
 
     if (validateSpecialCharacters(textValue)) {
-      alert("The special character are not allowed");
+      alert("The special characters are not allowed");
       textValue = "";
       return;
     }
