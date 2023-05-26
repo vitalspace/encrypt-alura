@@ -37,7 +37,7 @@
     return word;
   };
 
-  const buttonEncript = (e: Event) => {
+  const buttonEncrypt = (e: Event) => {
     e.preventDefault();
 
     if (validateTildes(textValue)) {
@@ -77,7 +77,7 @@
   >
     <div class="mx-auto max-w-md">
       <div class="text-center">
-        <h1 class="text-2xl text-gray-400">Encript/Decript</h1>
+        <h1 class="text-2xl text-gray-400">Encrypt/Decript</h1>
       </div>
 
       <div class="my-2 rounded-md border-2">
@@ -92,8 +92,8 @@
 
       <div class="flex space-x-2 text-center text-white transition-all">
         <button
-          on:click={buttonEncript}
-          class="w-full bg-green-300 hover:bg-green-400 py-2">Encript</button
+          on:click={buttonEncrypt}
+          class="w-full bg-green-300 hover:bg-green-400 py-2">Encrypt</button
         >
         <button
           on:click={buttonDecript}
