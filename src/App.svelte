@@ -1,6 +1,11 @@
 <script lang="ts">
-
   let textValue: string;
+
+  const validateTildes = (text: string) => {
+    const regex = /[áéíóúÁÉÍÓÚ]/;
+    if (regex.test(text)) return true;
+    return false;
+  };
 
   const validateSpecialCharacters = (text: string) => {
     const regex = /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>\/?]/;
@@ -34,6 +39,12 @@
 
   const buttonEncript = (e: Event) => {
     e.preventDefault();
+
+    if (validateTildes(textValue)) {
+      alert("The accents are not allowed");
+      textValue = "";
+      return;
+    }
 
     if (validateSpecialCharacters(textValue)) {
       alert("The special characters are not allowed");
@@ -91,25 +102,25 @@
       </div>
 
       <div class="mt-2 bg-slate-50 py-2 text-center text-gray-400">
-        <p>Plase don't use, capital latter or strange symbols</p>
+        <p>Please don't use, capital latter or strange symbols</p>
       </div>
 
       <div class="flex justify-center space-x-2 pt-3 text-center">
-        <a href="/"
+        <a href="https://github.com/vitalspace" target="_blank"
           ><img
             src="https://www.svgrepo.com/show/497210/instagram.svg"
             width="35"
             alt="instagram img"
           /></a
         >
-        <a href="/"
+        <a href="https://github.com/vitalspace" target="_blank"
           ><img
             src="https://www.svgrepo.com/show/507717/github-square.svg"
             width="35"
             alt="github img"
           /></a
         >
-        <a href="/"
+        <a href="https://github.com/vitalspace" target="_blank"
           ><img
             src="https://www.svgrepo.com/show/494209/linkedin.svg"
             width="35"
